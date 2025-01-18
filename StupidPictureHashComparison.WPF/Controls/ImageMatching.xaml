@@ -6,30 +6,12 @@
     xmlns:local="clr-namespace:StupidPictureHashComparison.WPF.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Grid>
-        <StackPanel Orientation="Horizontal">
-            <StackPanel Orientation="Vertical">
-                <Image
-                    x:Name="Image1"
-                    Width="512"
-                    Height="512"
-                    Margin="5"
-                    Source="Y:\Apogee\118617281_media_396325910_IMG_0129.png" />
-                <TextBlock x:Name="TextPath1" />
-                <TextBlock x:Name="TextHash1" />
+    <Grid HorizontalAlignment="Left" Margin="10">
+        <Border Background="#FFE2E2E2" CornerRadius="10" />
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+            <StackPanel x:Name="ImageList" Orientation="Horizontal">
+                <!--  Элементы с картинками ImageElement будут добавлены сюда  -->
             </StackPanel>
-            <StackPanel Orientation="Vertical">
-                <Image
-                    x:Name="Image2"
-                    Width="512"
-                    Height="512"
-                    Margin="5"
-                    Source="Y:\Apogee\118617281_media_396325910_IMG_0129.png" />
-                <TextBlock x:Name="TextPath2" />
-                <TextBlock x:Name="TextHash2" />
-            </StackPanel>
-
-
-        </StackPanel>
+        </ScrollViewer>
     </Grid>
 </UserControl>

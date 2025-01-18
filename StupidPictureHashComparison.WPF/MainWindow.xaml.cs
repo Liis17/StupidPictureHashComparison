@@ -99,14 +99,8 @@ public partial class MainWindow : Window
         foreach (var group in groupedHashes)
         {
             var matches = group.ToList();
-            for (int i = 0; i < matches.Count; i++)
-            {
-                for (int j = i + 1; j < matches.Count; j++)
-                {
-                    var imageMatching = new ImageMatching(matches[i], matches[j]);
-                    stackPanel.Children.Add(imageMatching);
-                }
-            }
+            var imageMatching = new ImageMatching(matches);
+            stackPanel.Children.Add(imageMatching);
         }
     }
 }

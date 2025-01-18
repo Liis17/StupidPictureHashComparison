@@ -24,20 +24,14 @@ namespace StupidPictureHashComparison.WPF.Controls
     /// </summary>
     public partial class ImageMatching : UserControl
     {
-        public ImageMatching(ImageHash img1, ImageHash img2)
+        public ImageMatching(List<ImageHash> imageHashes)
         {
             InitializeComponent();
-            var path1 = img1.Path;
-            var path2 = img2.Path;
-            var hash1 = img1.Hash;
-            var hash2 = img2.Hash;
-            TextPath1.Text = path1;
-            TextPath2.Text = path2;
-            TextHash1.Text = hash1;
-            TextHash2.Text = hash2;
-
-            Image1.Source = new BitmapImage(new Uri(path1));
-            Image2.Source = new BitmapImage(new Uri(path2));
+            foreach (var imageHash in imageHashes)
+            {
+                var imageElement = new ImageElement(imageHash);
+                ImageList.Children.Add(imageElement);
+            }
         }
     }
 }
