@@ -64,7 +64,6 @@ public partial class MainWindow : Window
             {
                 await Task.WhenAll(tasks);
                 tasks.Clear();
-                GC.Collect();
             }
         }
 
